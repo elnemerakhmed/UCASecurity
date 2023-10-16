@@ -1,0 +1,88 @@
+﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
+
+@{
+    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Functions_Hash_Title");
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="alert alert-primary" role="alert">
+                @SharedLocalizer.GetLocalizedHtmlString("Functions_Hash_Message") <a asp-controller="Home" asp-action="Learn" asp-route-id="Hash" class="no-underline">@SharedLocalizer.GetLocalizedHtmlString("Functions_Hash_URL")</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h1 class="fw-bold">@ViewData["Title"]</h1>
+            <hr />
+            <form>
+                <div class="mb-3">
+                    <label for="text">@SharedLocalizer.GetLocalizedHtmlString("Hash_Text")</label>
+                    <textarea id="text" class="form-control copy"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="md5">@SharedLocalizer.GetLocalizedHtmlString("Hash_MD5")</label>
+                    <input id="md5" type="text" class="form-control" readonly />
+                </div>
+                <div class="mb-3">
+                    <label for="ripmed160">@SharedLocalizer.GetLocalizedHtmlString("Hash_RIPMED160")</label>
+                    <input id="ripmed160" type="text" class="form-control" readonly />
+                </div>
+                <div class="mb-3">
+                    <label for="sha1">@SharedLocalizer.GetLocalizedHtmlString("Hash_SHA1")</label>
+                    <input id="sha1" type="text" class="form-control" readonly />
+                </div>
+                <div class="mb-3">
+                    <label for="sha256">@SharedLocalizer.GetLocalizedHtmlString("Hash_SHA256")</label>
+                    <input id="sha256" type="text" class="form-control" readonly />
+                </div>
+                <div class="mb-3">
+                    <label for="sha512">@SharedLocalizer.GetLocalizedHtmlString("Hash_SHA512")</label>
+                    <input id="sha512" type="text" class="form-control" readonly />
+                </div>
+                <div class="mb-3">
+                    <label for="tiger">@SharedLocalizer.GetLocalizedHtmlString("Hash_Tiger")</label>
+                    <input id="tiger" type="text" class="form-control" readonly />
+                </div>
+                <div class="mb-3">
+                    <label for="whirlpool">@SharedLocalizer.GetLocalizedHtmlString("Hash_Whirlpool")</label>
+                    <input id="whirlpool" type="text" class="form-control" readonly />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function fill(id, data) {
+            let status = parseInt(data.status);
+            let value = data.payload;
+            let error = "@SharedLocalizer.GetLocalizedHtmlString("Error")";
+            if (status == 200)
+                $("#" + id).val(value);
+            else
+                $("#" + id).html(error);
+        }
+
+        window.onload = function () {
+            $("#text").on('change keyup paste', function () {
+                let data = $("#text").val();
+                $.ajax({
+                    type: "get",
+                    url: '/api/hash?text=' + encodeURIComponent(data),
+                    success: function (data) {
+                        fill('md5', data.md5);
+                        fill('ripmed160', data.ripmed160);
+                        fill('sha1', data.sha1);
+                        fill('sha256', data.sha256);
+                        fill('sha512', data.sha512);
+                        fill('tiger', data.tiger);
+                        fill('whirlpool', data.whirlpool);
+                    }
+                });
+            });
+        }
+    </script>
+}

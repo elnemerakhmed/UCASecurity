@@ -1,0 +1,32 @@
+﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
+@model UCASecurity.Web.ViewModels.RSAKeyPairViewModel
+@{
+    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Algorithms_GenerateRSAKeyPair_Title");
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="fw-bold">@ViewData["Title"]</h1>
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label for="text">@SharedLocalizer.GetLocalizedHtmlString("RSA_PublicKey")</label>
+                    <textarea class="form-control" readonly rows="10">@Model.PublicKey</textarea>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label for="md5">@SharedLocalizer.GetLocalizedHtmlString("RSA_PrivateKey")</label>
+                    <textarea class="form-control" readonly rows="10">@Model.PrivateKey</textarea>
+                </div>
+            </form>        
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
+
+@{ 
+    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Home_Asymmetric");
+    List<ItemViewModel> Asymmetric = ViewBag.Asymmetric;
+}
+
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="text-blue display-5 fw-bold lh-1">@SharedLocalizer.GetLocalizedHtmlString("Home_Asymmetric")</h1>
+            </div>
+        </div>
+        <div class="row pt-3">
+            @foreach (var algorithm in Asymmetric)
+            {
+                @await Html.PartialAsync("_ItemPartial", algorithm);
+            }
+        </div>
+    </div>
+</div>

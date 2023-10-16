@@ -1,0 +1,27 @@
+﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
+@model LearnViewModel
+
+@{
+    string AlgorithmDescription = string.Format("Learn_{0}", Model.Algorithm);
+    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString(Model.Title);
+}
+
+<div class="container white p-5">
+    <div class="row">
+        <div class="col">
+            <h1>@SharedLocalizer.GetLocalizedHtmlString(Model.Title)</h1>
+            <hr />
+            <p>@SharedLocalizer.GetLocalizedHtmlString(AlgorithmDescription)</p>
+        </div>
+    </div>
+    @if (!string.IsNullOrWhiteSpace(Model.Image))
+    {
+<div class="row">
+    <div class="col">
+        <img style="max-width: 100% !important" src="~/algo/@Model.Image" alt="Image" />
+    </div>
+</div>}
+</div>
+<div style="height: 3vh">
+    
+</div>

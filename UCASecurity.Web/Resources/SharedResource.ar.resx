@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Algorithms_AES_Title" xml:space="preserve">
+    <value>خوارزمية AES</value>
+  </data>
+  <data name="Algorithms_BlowFish_Title" xml:space="preserve">
+    <value>خوارزمية Blow Fish</value>
+  </data>
+  <data name="Algorithms_Caesar_Title" xml:space="preserve">
+    <value>شيفرة القيصر</value>
+  </data>
+  <data name="Algorithms_DES_Title" xml:space="preserve">
+    <value>خوارزمية DES</value>
+  </data>
+  <data name="Algorithms_GenerateRSAKeyPair_Title" xml:space="preserve">
+    <value>توليد مفاتيح تشفير جديدة لخوارزمية RSA</value>
+  </data>
+  <data name="Algorithms_PlayFair_Title" xml:space="preserve">
+    <value>خوارزمية Play Fair</value>
+  </data>
+  <data name="Algorithms_RailFence_Title" xml:space="preserve">
+    <value>خوارزمية Rail Fence</value>
+  </data>
+  <data name="Algorithms_RC2_Title" xml:space="preserve">
+    <value>خوارزمية RC2</value>
+  </data>
+  <data name="Algorithms_RSA_Title" xml:space="preserve">
+    <value>خوارزمية RSA</value>
+  </data>
+  <data name="Algorithms_Vigenare_Title" xml:space="preserve">
+    <value>خوارزمية Vigenare</value>
+  </data>
+  <data name="Cipher" xml:space="preserve">
+    <value>الشيفرة</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="Functions_Hash_Message" xml:space="preserve">
+    <value>لتعلم المزيد أنقر</value>
+  </data>
+  <data name="Functions_Hash_Title" xml:space="preserve">
+    <value>حساب قيمة Hash</value>
+  </data>
+  <data name="Functions_Hash_URL" xml:space="preserve">
+    <value>هنا</value>
+  </data>
+  <data name="Hash_MD5" xml:space="preserve">
+    <value>هاش MD5</value>
+  </data>
+  <data name="Hash_RIPMED160" xml:space="preserve">
+    <value>هاش RIPMED160</value>
+  </data>
+  <data name="Hash_SHA1" xml:space="preserve">
+    <value>هاش SHA1</value>
+  </data>
+  <data name="Hash_SHA256" xml:space="preserve">
+    <value>هاش SHA256</value>
+  </data>
+  <data name="Hash_SHA512" xml:space="preserve">
+    <value>هاش SHA512</value>
+  </data>
+  <data name="Hash_Text" xml:space="preserve">
+    <value>أدخل النص المراد حساب قيمة الهاش له من فضلك</value>
+  </data>
+  <data name="Hash_Tiger" xml:space="preserve">
+    <value>هاش Tiger</value>
+  </data>
+  <data name="Hash_Whirlpool" xml:space="preserve">
+    <value>هاش Whirlpool</value>
+  </data>
+  <data name="Home_Advanced" xml:space="preserve">
+    <value>الخوارزميات المتقدمة</value>
+  </data>
+  <data name="Home_Asymmetric" xml:space="preserve">
+    <value>خوارزميات التشفير Asymmetric</value>
+  </data>
+  <data name="Home_Classic" xml:space="preserve">
+    <value>خوارزميات التشفير الكلاسيكية</value>
+  </data>
+  <data name="Home_Features_Title" xml:space="preserve">
+    <value>المميزات</value>
+  </data>
+  <data name="Home_Feature_A" xml:space="preserve">
+    <value>سهولة الوصول، يمكن للطلاب التفاعل معها من أي مكان.</value>
+  </data>
+  <data name="Home_Feature_B" xml:space="preserve">
+    <value>مجانية ومفتوحة المصدر، الكود متوافر على</value>
+  </data>
+  <data name="Home_Feature_C" xml:space="preserve">
+    <value>تجمع كل الخوارزميات في برنامج واحد، لذلك لا حاجة لبرامج اضافية.</value>
+  </data>
+  <data name="Home_Hash" xml:space="preserve">
+    <value>خوارزميات حساب Hash</value>
+  </data>
+  <data name="Home_Hero_Description" xml:space="preserve">
+    <value>الجيل الجديد من أدوات التشفير السحابية ذات الاستخدام التعليمي, تم تطويرها كمشروع لمساق التشفير المتقدم</value>
+  </data>
+  <data name="Home_Hero_Title" xml:space="preserve">
+    <value>أداة يوكاس كريبتو</value>
+  </data>
+  <data name="Home_Index_Title" xml:space="preserve">
+    <value>الصفحة الرئيسية</value>
+  </data>
+  <data name="Home_Math" xml:space="preserve">
+    <value>أدوات رياضية مساعدة</value>
+  </data>
+  <data name="Home_Symmetric" xml:space="preserve">
+    <value>خورازميات التشفير Symmetric</value>
+  </data>
+  <data name="Home_Team_Ahmed" xml:space="preserve">
+    <value>م. أحمد النمر</value>
+  </data>
+  <data name="Home_Team_Ahmed_BIO" xml:space="preserve">
+    <value>مطور تطبيقات ويب و بلوكتشين ومهندس أمن معلومات</value>
+  </data>
+  <data name="Home_Team_Description" xml:space="preserve">
+    <value>تعرف على فريق العمل</value>
+  </data>
+  <data name="Home_Team_Etaf" xml:space="preserve">
+    <value>م. عطاف أبو هدة</value>
+  </data>
+  <data name="Home_Team_Etaf_BIO" xml:space="preserve">
+    <value>مطورة تطبيقات ويب, مؤسسة فريق RUS وطالبة هندسة أمن المعلومات</value>
+  </data>
+  <data name="Home_Team_Hala" xml:space="preserve">
+    <value>م. هلا أبو سعدة</value>
+  </data>
+  <data name="Home_Team_Hala_BIO" xml:space="preserve">
+    <value>مطورة تطبيقات ويب, مؤسسة فريق RUS وطالبة هندسة أمن المعلومات</value>
+  </data>
+  <data name="Home_Team_Title" xml:space="preserve">
+    <value>من نحن؟</value>
+  </data>
+  <data name="Home_Tools_Title" xml:space="preserve">
+    <value>الأدوات</value>
+  </data>
+  <data name="Layout_About" xml:space="preserve">
+    <value>من نحن</value>
+  </data>
+  <data name="Layout_Algorithms" xml:space="preserve">
+    <value>الخوارزميات</value>
+  </data>
+  <data name="Layout_Brand" xml:space="preserve">
+    <value>أداة يوكاس كريبتو</value>
+  </data>
+  <data name="Layout_Footer" xml:space="preserve">
+    <value>يوكاس 2021</value>
+  </data>
+  <data name="Layout_Home" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
+  <data name="Learn_AES" xml:space="preserve">
+    <value>معيار التشفير المتقدم ( Advanced Encryption Standard)‏، هو طريقة تشفير متماثل رسمية تبنتها NIST، تُعتبر طريقة آمنة للتشفير وذلك بسبب طول مفتاح التشفير. هذه الخوارزمية هي تطوير لأفكار ظهرت في DES، تعتمد على نفس المفتاح في عمليتي التشفير وفك التشفير. تشفر الخوارزمية نص طوله 128 بت أو 16 بايت، ويختلف مفتاح التشفير حسب الحاجة حيث يمكن أن يكون 16 أو 24 أو 32 بايت (128، 192، 256) بت. وتسمى حسب طول مفتاح التشفير، مثال AES-192 أي أن مفتاح التشفير يساوي 192 بت، تتكون من أربع خطوات أساسية وهي عملية الاستبدال، عملية الازاحة، خلط الأعمدة، اضافة مفتاح الدورة، كل دورة لها مفتاحها الخاص.</value>
+  </data>
+  <data name="Learn_BlowFish" xml:space="preserve">
+    <value>Blowfish هي تقنية تشفير صممها Bruce Schneier في عام 1993 كبديل لتقنية التشفير DES. تعتبر أسرع  من DES وتوفر معدل تشفير جيد مع عدم وجود تقنية تحليل تشفير فعالة حتى الآن. تعتبر واحدة من أوائل خوارزميات التشفير الآمنة التي لا تخضع لأي براءات اختراع وبالتالي فهي متاحة مجانًا لأي شخص لاستخدامها. في Blowfish ، يكون حجم الكتلة النصية 64 بت وحجم المفتاح هو 32 بت.</value>
+  </data>
+  <data name="Learn_Caesar" xml:space="preserve">
+    <value>تعد شيفرة القيصر من أقدم أنواع التشفير، ويقال أنه استخدمها القيصر يوليوس. تعتمد هذه الشيفرة على الإزاحة، حيث يتم إزاحة كل حرف من الرسالة الأصلية بعدد معين من الحروف وهو مفتاح التشفير. يمكن فك تشفير النص المشفر بتطبيق نفس عدد الإزاحات في الاتجاه المعاكس. تصنف هذه الخوارزمية من شيفرات الاستبدال (substitution cipher) ، بسبب استبدال حرف واحد بآخر بطريقة متسقة.</value>
+  </data>
+  <data name="Learn_DES" xml:space="preserve">
+    <value>DES هي خوارزمية تشفير تماثل، تعتبر من أكثر الخوارزميات استعمالًا قبل ظهور AES، تأخذ الخوارزمية مدخلين الأول: النص المراد تشفيره والثاني هو المفتاح، في DES يجب أن يكون طول النص 64 بت وطول المفتاح 48 بت. تعتمد بشكل أساسي على التبديل والتقليب في التشفير.</value>
+  </data>
+  <data name="Learn_GCD" xml:space="preserve">
+    <value>تقوم هذه الخوارزمية بحساب العامل المشترك الأكبر بين رقمين صحيحين</value>
+  </data>
+  <data name="Learn_Hash" xml:space="preserve">
+    <value>تقوم بحساب قيمة الهاش لنص معين، حيث يقوم المستخدم بإضافة النص ويقوم البرنامج بطباعة الهاش بقيمه المختلفة</value>
+  </data>
+  <data name="Learn_PasswordStrength" xml:space="preserve">
+    <value>تقوم هذه الخوارزمية بتقييم قوة كلمة المرور، حيث يجب عليك تزويدها بكلمة المرور وستقوم بفحصها وطبعا نسبة على الشاشة تبين مدى قوة هذه الكلمة، 
+كلمة المرور الجيدة تتكون من حروف كبيرة وصغيرة وأرقام ورموز خاصة وطولها أكبر أو يساوي ثمانية أحرف</value>
+  </data>
+  <data name="Learn_PlayFair" xml:space="preserve">
+    <value>خوارزمية Playfair هي نوع من شيفرات الاستبدال المستخدمة لتشفير البيانات. تم تقديمها في عام 1854، وقد اشتملت على استخدام المفاتيح التي ترتب الحروف الأبجدية في أنماط هندسية من أجل تشفير الرسائل. يتم تشفير زوج من الحروف الهجائية في كل مرة بدلاً من تشفير حرف واحد</value>
+  </data>
+  <data name="Learn_PrimeFactorization" xml:space="preserve">
+    <value>تقوم هذه الخوارزمية بحساب العوامل الأولية للرقم المعطى ، ويطبع العوامل بصيغة الضرب</value>
+  </data>
+  <data name="Learn_RailFence" xml:space="preserve">
+    <value>خوارزمية RailFence   من شيفرات التحويل (Transposition) حيث يتم كتابة النص الأصلي لأسفل وقطريًا على قضبان متتالية من السياج الوهمي. عندما نصل إلى السكة السفلية ، نتحرك صعودًا قطريًا ، وبعد الوصول إلى السكة العلوية ، يتغير الاتجاه مرة أخرى. وهكذا تتم كتابة الحروف الهجائية للرسالة بطريقة متعرجة. بعد الانتهاء من الكتابة، يتم دمج الصفوف الفردية للحصول على نص مشفر.</value>
+  </data>
+  <data name="Learn_RC2" xml:space="preserve">
+    <value>RC2 هي خوارزمية تشفير متماثلة المفتاح، تعرف أيضًا باسم ARC2، تم تصميمها بواسطة Ron Rivest في 1987، حجم الكتلة يساوي 8 بايت، حيث يتم تقسيم النص المدخل إلى كتل من 8 بايت، ثم يتم معالجة كل كتلة بشكل منفرد، RC2 تعتمد بشكل أساسي على عمليتي الخلط والهرس 😂😂
+في الوقت الحالي أصبحت RC2 ضعيفة أمام بعض الهجمات.</value>
+  </data>
+  <data name="Learn_RSA" xml:space="preserve">
+    <value>تعد خوارزمية RSA من خوارزميات التشفير غير المتماثل ويستخدم على نطاق واسع لتأمين البيانات الحساسة ، لا سيما عندما يتم إرسالها عبر شبكة غير آمنة مثل الإنترنت. تم وصف RSA علنًا لأول مرة في عام 1977 من قبل Ron Rivest و Adi Shamir و Leonard Adleman من معهد ماساتشوستس للتكنولوجيا ، من خلال إنشاء خوارزمية Public Key عام 1973. يستخدم تشفير public key  مفتاحين مختلفين ولكنهما مرتبطان رياضياً (أحدهما عام والآخر خاص). يمكن مشاركة المفتاح العام مع الجميع ، بينما يجب أن يظل المفتاح الخاص سراً. في تشفير RSA ، يمكن للمفاتيح العامة والخاصة تشفير رسالة ؛ يتم استخدام المفتاح المعاكس من المفتاح المستخدم لتشفير الرسالة لفك تشفيرها. هذه السمة هي أحد الأسباب التي جعلت RSA الأكثر استخدامًا، فهي توفر طريقة لضمان سرية الاتصالات الإلكترونية وتخزين البيانات وسلامتها ومصداقيتها وعدم رفضها.</value>
+  </data>
+  <data name="Learn_Vigenare" xml:space="preserve">
+    <value>تعد خوارزمية Vigenère  نوع من شيفرات الاستبدال (substitution cipher) التي اخترعها عالم التشفير الفرنسي في القرن السادس عشر Blaise de Vigenère واستخدمت لتشفير البيانات حيث يتم إخفاء بنية النص الأصلي إلى حد ما في النص المشفر باستخدام عدة شفرات استبدال مختلفة بدلاً من واحدة فقط ؛ يحدد مفتاح التشفير طريقة الاستبدال التي سيتم تطبيقها لتشفير كل حرف من حروف النص الأصلي.</value>
+  </data>
+  <data name="Math_GCD_Input_1" xml:space="preserve">
+    <value>العدد الأول</value>
+  </data>
+  <data name="Math_GCD_Input_2" xml:space="preserve">
+    <value>العدد الثاني</value>
+  </data>
+  <data name="Math_GCD_Result" xml:space="preserve">
+    <value>النتيجة</value>
+  </data>
+  <data name="Math_GCD_Title" xml:space="preserve">
+    <value>العامل المشترك الأكبر</value>
+  </data>
+  <data name="Math_PasswordStrength_Input" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="Math_PasswordStrength_Result" xml:space="preserve">
+    <value>النتيجة</value>
+  </data>
+  <data name="Math_PasswordStrength_Title" xml:space="preserve">
+    <value>حاسبة قوة كلمات المرور</value>
+  </data>
+  <data name="Math_PrimeFactorization_Title" xml:space="preserve">
+    <value>العوامل الرئيسية</value>
+  </data>
+  <data name="Math_PrimeTest_False" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="Math_PrimeTest_Input" xml:space="preserve">
+    <value>الرقم</value>
+  </data>
+  <data name="Math_PrimeTest_Result" xml:space="preserve">
+    <value>النتيجة</value>
+  </data>
+  <data name="Math_PrimeTest_Title" xml:space="preserve">
+    <value>فحص العدد الأولي</value>
+  </data>
+  <data name="Math_PrimeTest_True" xml:space="preserve">
+    <value>صحيح</value>
+  </data>
+  <data name="PrimeFactorization_Input" xml:space="preserve">
+    <value>الرقم</value>
+  </data>
+  <data name="PrimeFactorization_Result" xml:space="preserve">
+    <value>النتيجة</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>النتيجة</value>
+  </data>
+  <data name="RSA_Alert_Text" xml:space="preserve">
+    <value>إذا كنت لا تمتلك مفاتيح التشفير وفك التشفير</value>
+  </data>
+  <data name="RSA_Alert_URL_Text" xml:space="preserve">
+    <value>أنقر هنا لإنشاء زوج مفاتيح تشفير</value>
+  </data>
+  <data name="RSA_Cipher" xml:space="preserve">
+    <value>النص المراد فك تشفيره</value>
+  </data>
+  <data name="RSA_CipherResult" xml:space="preserve">
+    <value>نتيجة التشفير</value>
+  </data>
+  <data name="RSA_PrivateKey" xml:space="preserve">
+    <value>مفتاح التشفير الخاص</value>
+  </data>
+  <data name="RSA_PublicKey" xml:space="preserve">
+    <value>مفتاح التشفير العام</value>
+  </data>
+  <data name="RSA_Text" xml:space="preserve">
+    <value>النص المراد تشفيره</value>
+  </data>
+  <data name="RSA_TextResult" xml:space="preserve">
+    <value>نتيجة فك التشفير</value>
+  </data>
+  <data name="Symmetric_Key" xml:space="preserve">
+    <value>مفتاح التشفير / فك التشفير</value>
+  </data>
+  <data name="Symmetric_Mode" xml:space="preserve">
+    <value>الوضع</value>
+  </data>
+  <data name="Symmetric_Select_Mode" xml:space="preserve">
+    <value>من فضلك إختر الوضع</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>النص</value>
+  </data>
+</root>

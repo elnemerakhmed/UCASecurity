@@ -1,0 +1,51 @@
+﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
+
+@{
+    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Math_PrimeTest_Title");
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="fw-bold">@ViewData["Title"]</h1>
+            <hr />
+            <form>
+                <div class="mb-3">
+                    <label for="input">@SharedLocalizer.GetLocalizedHtmlString("Math_PrimeTest_Input")</label>
+                    <input id="input" type="number" min="1" max="2000000000" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label for="result">@SharedLocalizer.GetLocalizedHtmlString("Math_PrimeTest_Result")</label>
+                    <input id="result" type="text" class="form-control" readonly />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function fill(id, data) {
+            let status = parseInt(data.status);
+            let value = data.payload;
+            let error = "@SharedLocalizer.GetLocalizedHtmlString("Error")";
+            if (status == 200)
+                $("#" + id).val(value);
+            else
+                $("#" + id).html(error);
+        }
+
+        window.onload = function () {
+            $("#input").on('change keyup paste', function () {
+                let number = $("#input").val();
+                $.ajax({
+                    type: "get",
+                    url: '/api/primetest?number=' + number,
+                    success: function (data) {
+                        fill('result', data);
+                    }
+                });
+            });
+        }
+    </script>
+}

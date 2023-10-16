@@ -1,0 +1,80 @@
+﻿body {
+    background-color: #f9f9f9;
+}
+
+.upper-navbar {
+    background-color: rgb(36, 81, 159) !important;
+}
+
+.white {
+    background: #ffffff ;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+.healthy {
+    width: 25px;
+}
+
+.item a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.rounded-item {
+    border-radius: 50px !important;
+}
+
+.blue {
+    background-color: #2f5399;
+}
+
+.yellow {
+    background-color: #ffd74b;
+}
+
+.bordered {
+    border: 5px solid gold;
+}
+
+.team {
+    padding: 10px 80px;
+}
+
+.text-blue {
+    color: #2f5399;
+}
+
+.team-member {
+    border-radius: 50%;
+    background-color: #daf0fe;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.card img {
+    height: 300px;
+}
+
+@media (min-width: 768px) {
+    .brand-text {
+        margin-left: 7px !important;
+    }
+}

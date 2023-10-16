@@ -1,0 +1,34 @@
+﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
+
+@{ 
+    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Home_Symmetric");
+    List<ItemViewModel> Classic = ViewBag.Classic;
+    List<ItemViewModel> Advanced = ViewBag.Advanced;
+}
+
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="text-blue display-5 fw-bold lh-1">@SharedLocalizer.GetLocalizedHtmlString("Home_Classic")</h1>
+            </div>
+        </div>
+        <div class="row pt-3">
+            @foreach (var algorithm in Classic)
+            {
+                @await Html.PartialAsync("_ItemPartial", algorithm);
+            }
+        </div>
+        <div class="row pt-5">
+            <div class="col text-center">
+                <h1 class="text-blue display-5 fw-bold lh-1">@SharedLocalizer.GetLocalizedHtmlString("Home_Advanced")</h1>
+            </div>
+        </div>
+        <div class="row pt-3">
+            @foreach (var algorithm in Advanced)
+            {
+                @await Html.PartialAsync("_ItemPartial", algorithm);
+            }
+        </div>
+    </div>
+</div>

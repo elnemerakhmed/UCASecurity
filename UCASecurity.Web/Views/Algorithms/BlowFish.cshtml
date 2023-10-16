@@ -1,0 +1,85 @@
+﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
+
+@{
+    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Algorithms_BlowFish_Title");
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="fw-bold">@ViewData["Title"]</h1>
+            <hr />
+            <form>
+                <div class="mb-3">
+                    <label for="key">@SharedLocalizer.GetLocalizedHtmlString("Symmetric_Key")</label>
+                    <input id="key" type="text" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label for="text">@SharedLocalizer.GetLocalizedHtmlString("Text")</label>
+                    <textarea id="text" class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="result_encryption">@SharedLocalizer.GetLocalizedHtmlString("Result")</label>
+                    <textarea id="result_encryption" class="form-control" readonly></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="cipher">@SharedLocalizer.GetLocalizedHtmlString("Cipher")</label>
+                    <textarea id="cipher" class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="result_decryption">@SharedLocalizer.GetLocalizedHtmlString("Result")</label>
+                    <textarea id="result_decryption" class="form-control" readonly></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+        function fill(id, data) {
+            let status = parseInt(data.status);
+            let value = data.payload;
+            let error = "@SharedLocalizer.GetLocalizedHtmlString("Error")";
+            if (status == 200)
+                $("#" + id).val(value);
+            else
+                $("#" + id).html(error);
+        }
+
+        window.onload = function () {
+            $("#text").on('change keyup paste', function () {
+                let key = $('#key').val();
+                if (key === '' || key === undefined)
+                    return;
+
+                let text = $('#text').val();
+                $.ajax({
+                    type: "get",
+                    url: '/api/blowfish/encrypt?key=' + encodeURIComponent(key) + '&text=' + encodeURIComponent(text),
+                    success: function (data) {
+                        fill('result_encryption', JSON.parse(data));
+                    },
+                    dataType: "HTML"
+                });
+            });
+
+            $("#cipher").on('change keyup paste', function () {
+                let key = $('#key').val();
+                if (key === '' || key === undefined)
+                    return;
+
+                let cipher = $('#cipher').val();
+                $.ajax({
+                    type: "get",
+                    url: '/api/blowfish/decrypt?key=' + encodeURIComponent(key) + '&cipher=' + encodeURIComponent(cipher),
+                    success: function (data) {
+                        fill('result_decryption', JSON.parse(data));
+                    },
+                    dataType: "HTML"
+                });
+            });
+        }
+    </script>
+}

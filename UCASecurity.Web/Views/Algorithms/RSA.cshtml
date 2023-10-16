@@ -1,0 +1,102 @@
+﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
+
+@{
+    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Algorithms_RSA_Title");
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="alert alert-primary" role="alert">
+                @SharedLocalizer.GetLocalizedHtmlString("RSA_Alert_Text") <a asp-controller="Algorithms" asp-action="GenerateRSAKeyPair" target="_blank" class="text-decoration-none bold">@SharedLocalizer.GetLocalizedHtmlString("RSA_Alert_URL_Text")</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h1 class="fw-bold">@ViewData["Title"]</h1>
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label for="RSA_PublicKey">@SharedLocalizer.GetLocalizedHtmlString("RSA_PublicKey")</label>
+                    <textarea id="RSA_PublicKey" class="form-control" rows="5"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="RSA_Text">@SharedLocalizer.GetLocalizedHtmlString("RSA_Text")</label>
+                    <textarea id="RSA_Text" class="form-control" rows="5"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="RSA_CipherResult">@SharedLocalizer.GetLocalizedHtmlString("RSA_CipherResult")</label>
+                    <textarea id="RSA_CipherResult" class="form-control" rows="5" readonly></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label for="RSA_PrivateKey">@SharedLocalizer.GetLocalizedHtmlString("RSA_PrivateKey")</label>
+                    <textarea id="RSA_PrivateKey" class="form-control" rows="5"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="RSA_Cipher">@SharedLocalizer.GetLocalizedHtmlString("RSA_Cipher")</label>
+                    <textarea id="RSA_Cipher" class="form-control" rows="5"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="RSA_TextResult">@SharedLocalizer.GetLocalizedHtmlString("RSA_TextResult")</label>
+                    <textarea id="RSA_TextResult" class="form-control" readonly rows="5"></textarea>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+        function fill(id, data) {
+            let status = parseInt(data.status);
+            let value = data.payload;
+            let error = "@SharedLocalizer.GetLocalizedHtmlString("Error")";
+            if (status == 200)
+                $("#" + id).val(value);
+            else
+                $("#" + id).html(error);
+        }
+
+        window.onload = function () {
+            $("#RSA_PublicKey, #RSA_Text").on('change keyup paste', function () {
+                let publicKey = $('#RSA_PublicKey').val();
+                let text = $('#RSA_Text').val();
+                if (publicKey !== '' && publicKey !== undefined && text !== '' && text !== undefined){
+                    $.ajax({
+                        type: "get",
+                        url: '/api/rsa/encrypt?key=' + encodeURIComponent(publicKey) + '&text=' + encodeURIComponent(text),
+                        success: function (data) {
+                            fill('RSA_CipherResult', JSON.parse(data));
+                        },
+                        dataType: "HTML"
+                    });
+                }
+            });
+            $("#RSA_PrivateKey, #RSA_Cipher").on('change keyup paste', function () {
+                let privateKey = $('#RSA_PrivateKey').val();
+                let cipher = $('#RSA_Cipher').val();
+                if (privateKey !== '' && privateKey !== undefined && cipher !== '' && cipher !== undefined) {
+                    $.ajax({
+                        type: "get",
+                        url: '/api/rsa/decrypt?key=' + encodeURIComponent(privateKey) + '&cipher=' + encodeURIComponent(cipher),
+                        success: function (data) {
+                            fill('RSA_TextResult', JSON.parse(data));
+                        },
+                        dataType: "HTML"
+                    });
+                }
+            });
+
+        }
+    </script>
+}

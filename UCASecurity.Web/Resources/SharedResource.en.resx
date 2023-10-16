@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Algorithms_AES_Title" xml:space="preserve">
+    <value>AES</value>
+  </data>
+  <data name="Algorithms_BlowFish_Title" xml:space="preserve">
+    <value>BlowFish</value>
+  </data>
+  <data name="Algorithms_Caesar_Title" xml:space="preserve">
+    <value>Caesar Cipher</value>
+  </data>
+  <data name="Algorithms_DES_Title" xml:space="preserve">
+    <value>DES</value>
+  </data>
+  <data name="Algorithms_GenerateRSAKeyPair_Title" xml:space="preserve">
+    <value>Generate RSA Key Pair</value>
+  </data>
+  <data name="Algorithms_PlayFair_Title" xml:space="preserve">
+    <value>Play Fair</value>
+  </data>
+  <data name="Algorithms_RailFence_Title" xml:space="preserve">
+    <value>Rail Fence</value>
+  </data>
+  <data name="Algorithms_RC2_Title" xml:space="preserve">
+    <value>RC2</value>
+  </data>
+  <data name="Algorithms_RSA_Title" xml:space="preserve">
+    <value>RSA Algorithm</value>
+  </data>
+  <data name="Algorithms_Vigenare_Title" xml:space="preserve">
+    <value>Vigenare</value>
+  </data>
+  <data name="Arabic" xml:space="preserve">
+    <value>العربية</value>
+  </data>
+  <data name="Cipher" xml:space="preserve">
+    <value>Cipher</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Functions_Hash_Message" xml:space="preserve">
+    <value>To learn more about hashes click</value>
+  </data>
+  <data name="Functions_Hash_Title" xml:space="preserve">
+    <value>Hash Functions</value>
+  </data>
+  <data name="Functions_Hash_URL" xml:space="preserve">
+    <value>here</value>
+  </data>
+  <data name="Hash_MD5" xml:space="preserve">
+    <value>MD5 Hash</value>
+  </data>
+  <data name="Hash_RIPMED160" xml:space="preserve">
+    <value>RIPMED160 Hash</value>
+  </data>
+  <data name="Hash_SHA1" xml:space="preserve">
+    <value>SHA1 Hash</value>
+  </data>
+  <data name="Hash_SHA256" xml:space="preserve">
+    <value>SHA256 Hash</value>
+  </data>
+  <data name="Hash_SHA512" xml:space="preserve">
+    <value>SHA512 Hash</value>
+  </data>
+  <data name="Hash_Text" xml:space="preserve">
+    <value>Please enter the text you want to hash</value>
+  </data>
+  <data name="Hash_Tiger" xml:space="preserve">
+    <value>Tiger Hash</value>
+  </data>
+  <data name="Hash_Whirlpool" xml:space="preserve">
+    <value>Whirlpool Hash</value>
+  </data>
+  <data name="Home_Advanced" xml:space="preserve">
+    <value>Advanced Algorithms</value>
+  </data>
+  <data name="Home_Asymmetric" xml:space="preserve">
+    <value>Asymmetric Encryption</value>
+  </data>
+  <data name="Home_Classic" xml:space="preserve">
+    <value>Classical Encryption Algorithms</value>
+  </data>
+  <data name="Home_Features_Title" xml:space="preserve">
+    <value>Features</value>
+  </data>
+  <data name="Home_Feature_A" xml:space="preserve">
+    <value>Accessibility, students can interact with our tool anywhere.</value>
+  </data>
+  <data name="Home_Feature_B" xml:space="preserve">
+    <value>Free and Open source, its source code available on</value>
+  </data>
+  <data name="Home_Feature_C" xml:space="preserve">
+    <value>All-in-one, no need for extra software installation.</value>
+  </data>
+  <data name="Home_Hash" xml:space="preserve">
+    <value>Hash Algorithms</value>
+  </data>
+  <data name="Home_Hero_Description" xml:space="preserve">
+    <value>A new generation of cloud enryption online tool for educational purpuses, developed as a graduation project for Cryptography II Course.</value>
+  </data>
+  <data name="Home_Hero_Title" xml:space="preserve">
+    <value>UCAS Crypto Tool</value>
+  </data>
+  <data name="Home_Index_Title" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
+  <data name="Home_Math" xml:space="preserve">
+    <value>Math Utilities</value>
+  </data>
+  <data name="Home_Symmetric" xml:space="preserve">
+    <value>Symmetric Encryption</value>
+  </data>
+  <data name="Home_Team_Ahmed" xml:space="preserve">
+    <value>Eng. Ahmed El Nemer</value>
+  </data>
+  <data name="Home_Team_Ahmed_BIO" xml:space="preserve">
+    <value>Web &amp; Blockchain Developer, RUS team member and ISE</value>
+  </data>
+  <data name="Home_Team_Description" xml:space="preserve">
+    <value>Meet the team</value>
+  </data>
+  <data name="Home_Team_Etaf" xml:space="preserve">
+    <value>Eng. Etaf Abu Hadda</value>
+  </data>
+  <data name="Home_Team_Etaf_BIO" xml:space="preserve">
+    <value>Web developer, RUS team CEO and ISE</value>
+  </data>
+  <data name="Home_Team_Hala" xml:space="preserve">
+    <value>Eng. Hala Abu Sada</value>
+  </data>
+  <data name="Home_Team_Hala_BIO" xml:space="preserve">
+    <value>Web developer, RUS team CEO and ISE</value>
+  </data>
+  <data name="Home_Team_Title" xml:space="preserve">
+    <value>Who Are we?</value>
+  </data>
+  <data name="Home_Tools_Title" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="Layout_About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Layout_Algorithms" xml:space="preserve">
+    <value>Algorithms</value>
+  </data>
+  <data name="Layout_Brand" xml:space="preserve">
+    <value>UCAS Crypto Tool</value>
+  </data>
+  <data name="Layout_Footer" xml:space="preserve">
+    <value>UCAS 2021</value>
+  </data>
+  <data name="Layout_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Learn_AES" xml:space="preserve">
+    <value>AES  ( Advanced Encryption Standard) Algorithm, established by NIST as a symmetric encryption algorithm, it’s considered as a secure algorithm due to its key length. all of AES operations are performed on 8-bit bytes. In particular, the arithmetic operations of addition, multiplication, and division are performed over the finite field GF(28), The cipher takes a plaintext block size of 128 bits, or 16 bytes. The key length can be 16, 24, or 32 bytes (128, 192, or 256 bits). The algorithm is referred to as AES-128, AES-192, or AES-256, depending on the key length. Each round has it’s new generated key.</value>
+  </data>
+  <data name="Learn_BlowFish" xml:space="preserve">
+    <value>Blowfish is an encryption technique designed by Bruce Schneier in 1993 as an alternative to DES Encryption Technique. It is significantly faster than DES and provides a good encryption rate with no effective cryptanalysis technique found until now. It is one of the first, secure block ciphers not subject to any patents and hence freely available for anyone to use. in Blowfish the blockSize is 64-bits and the keySize is 32-bits.</value>
+  </data>
+  <data name="Learn_Caesar" xml:space="preserve">
+    <value>Caesar cipher is a classic example of ancient cryptography and is said to have been used by Julius Caesar. The Caesar cipher is based on transposition and involves shifting each letter of the plaintext message by a certain number of letters and it’s the key of the cipher. The ciphertext can be decrypted by applying the same number of shifts in the opposite direction. This type of encryption is known as a substitution cipher, due to the substitution of one letter for another in a consistent fashion.</value>
+  </data>
+  <data name="Learn_DES" xml:space="preserve">
+    <value>The DES (Data Encryption Standard) algorithm is a symmetric-key block cipher created in the early 1970s by an IBM team and adopted by the (NIST). that was the most widely used encryption scheme. Before the publishing of AES, The algorithm takes the plain text in 64-bit blocks and converts them into ciphertext using 48-bit keys. it depends essentially on permutations.</value>
+  </data>
+  <data name="Learn_GCD" xml:space="preserve">
+    <value>it calculates the Great Common Divisor between two integers.</value>
+  </data>
+  <data name="Learn_Hash" xml:space="preserve">
+    <value>it calculates different hashes for specific text,MD5 Hash,  RIPEMD 160 Hash, SHA1, SHA256,SHA512, Tiger Hash,Whirlpool Hash, the user provides specific text to calculate hashes for it .</value>
+  </data>
+  <data name="Learn_PasswordStrength" xml:space="preserve">
+    <value>this algorithm calculates how strong your password is, you have to provide your password and it will display a percent, the perfect password contains lower and upper case letters, numbers, Non Alphabetical Characters, and it's length equal or more than eight characters.</value>
+  </data>
+  <data name="Learn_PlayFair" xml:space="preserve">
+    <value>The Playfair cipher (Playfair square) is a type of substitution cipher used for the encryption of data &amp; Introduced in 1854. It involved the use of keys that arrange alphabetical letters in geometric patterns in order to encode messages that we encrypt a pair of alphabets(digraphs) instead of a single alphabet.</value>
+  </data>
+  <data name="Learn_PrimeFactorization" xml:space="preserve">
+    <value>it calculates the prime factors of the given number, and calculate it as multiplied numbers.</value>
+  </data>
+  <data name="Learn_RailFence" xml:space="preserve">
+    <value>Rail Fence cipher is a transposition cipher that the plaintext is written downwards and diagonally on successive rails of an imaginary fence. When we reach the bottom rail, we traverse upwards moving diagonally, after reaching the top rail, the direction is changed again. Thus the alphabets of the message are written in a zig-zag manner. After each alphabet has been written, the individual rows are combined to obtain the cipher-text.</value>
+  </data>
+  <data name="Learn_RC2" xml:space="preserve">
+    <value>RC2 (also known as ARC2) is a symmetric-key block cipher designed by Ron Rivest in 1987. "RC" stands for "Ron's Code" or "Rivest Cipher"; 
+
+The block size is 8 bytes (64 bits). The input data is divided into blocks of 8 bytes and then each of them is processed separately. RC2 depends on two core rounds, Mixing and Mashing Rounds.
+Now, RC2 is vulnerable to a related-key attack using 234 chosen plaintexts</value>
+  </data>
+  <data name="Learn_RSA" xml:space="preserve">
+    <value>The RSA algorithm is the basis of a cryptosystem which enables asymmetric  encryption and is widely used to secure sensitive data, particularly when it is being sent over an insecure network such as the internet. RSA was first publicly described in 1977 by Ron Rivest, Adi Shamir and Leonard Adleman of the Massachusetts Institute of Technology, through the 1973 creation of a public key algorithm.
+Public key cryptography, uses two different but mathematically linked keys (one public and one private). The public key can be shared with everyone, whereas the private key must be kept secret. In RSA cryptography, both the public and the private keys can encrypt a message; the opposite key from the one used to encrypt a message is used to decrypt it. This attribute is one reason why RSA has become the most widely used asymmetric algorithm: It provides a method to assure the confidentiality, integrity, authenticity, and non-repudiation of electronic communications and data storage.</value>
+  </data>
+  <data name="Learn_Vigenare" xml:space="preserve">
+    <value>Vigenère cipher is a type of substitution cipher invented by the 16th-century French cryptographer Blaise de Vigenère and used for data encryption in which the original plaintext structure is somewhat concealed in the ciphertext by using several different monoalphabetic substitution ciphers rather than just one.The key specifies which particular substitution is to be employed for encrypting each letter in the plaintext.</value>
+  </data>
+  <data name="Math_GCD_Input_1" xml:space="preserve">
+    <value>First Number</value>
+  </data>
+  <data name="Math_GCD_Input_2" xml:space="preserve">
+    <value>Second Number</value>
+  </data>
+  <data name="Math_GCD_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Math_GCD_Title" xml:space="preserve">
+    <value>GCD</value>
+  </data>
+  <data name="Math_PasswordStrength_Input" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Math_PasswordStrength_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Math_PasswordStrength_Title" xml:space="preserve">
+    <value>Password Strength Calculator</value>
+  </data>
+  <data name="Math_PrimeFactorization_Title" xml:space="preserve">
+    <value>Prime Factorization</value>
+  </data>
+  <data name="Math_PrimeTest_False" xml:space="preserve">
+    <value>False</value>
+  </data>
+  <data name="Math_PrimeTest_Input" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="Math_PrimeTest_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Math_PrimeTest_Title" xml:space="preserve">
+    <value>Prime Test</value>
+  </data>
+  <data name="Math_PrimeTest_True" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="PrimeFactorization_Input" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="PrimeFactorization_Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="RSA_Alert_Text" xml:space="preserve">
+    <value>If don't have keys yet</value>
+  </data>
+  <data name="RSA_Alert_URL_Text" xml:space="preserve">
+    <value>Click here to generate key pair</value>
+  </data>
+  <data name="RSA_Cipher" xml:space="preserve">
+    <value>Cipher</value>
+  </data>
+  <data name="RSA_CipherResult" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="RSA_PrivateKey" xml:space="preserve">
+    <value>Private Key</value>
+  </data>
+  <data name="RSA_PublicKey" xml:space="preserve">
+    <value>Public Key</value>
+  </data>
+  <data name="RSA_Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="RSA_TextResult" xml:space="preserve">
+    <value>Result</value>
+  </data>
+  <data name="Symmetric_Key" xml:space="preserve">
+    <value>Encryption / Decryption key</value>
+  </data>
+  <data name="Symmetric_Mode" xml:space="preserve">
+    <value>Mode</value>
+  </data>
+  <data name="Symmetric_Select_Mode" xml:space="preserve">
+    <value>Please select an algorithm mode</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+</root>

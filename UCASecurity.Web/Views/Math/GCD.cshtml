@@ -1,0 +1,56 @@
+﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
+
+@{
+    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Math_GCD_Title");
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="fw-bold">@ViewData["Title"]</h1>
+            <hr />
+            <form>
+                <div class="mb-3">
+                    <label for="input1">@SharedLocalizer.GetLocalizedHtmlString("Math_GCD_Input_1")</label>
+                    <input id="input1" type="number" min="1" max="2000000000" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label for="input2">@SharedLocalizer.GetLocalizedHtmlString("Math_GCD_Input_2")</label>
+                    <input id="input2" type="number" min="1" max="2000000000" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label for="result">@SharedLocalizer.GetLocalizedHtmlString("Math_GCD_Result")</label>
+                    <input id="result" type="text" class="form-control" readonly />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function fill(id, data) {
+            let status = parseInt(data.status);
+            let value = data.payload;
+            let error = "@SharedLocalizer.GetLocalizedHtmlString("Error")";
+            if (status == 200)
+                $("#" + id).val(value);
+            else
+                $("#" + id).html(error);
+        }
+
+        window.onload = function () {
+            $("#input1, #input2").on('change keyup paste', function () {
+                let a = $("#input1").val();
+                let b = $("#input2").val();
+                $.ajax({
+                    type: "get",
+                    url: '/api/gcd?a=' + a + '&b=' +  b,
+                    success: function (data) {
+                        fill('result', data);
+                    }
+                });
+            });
+        }
+    </script>
+}

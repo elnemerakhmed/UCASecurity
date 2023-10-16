@@ -1,0 +1,140 @@
+﻿@inject UCASecurity.Web.Resources.LocalizationService SharedLocalizer
+
+@{
+    ViewData["Title"] = SharedLocalizer.GetLocalizedHtmlString("Home_Index_Title"); 
+}
+
+<div class="container pt-5" style=" min-height: 85vh !important; ">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5 w-100">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="~/images/hero.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3 text-blue">@SharedLocalizer.GetLocalizedHtmlString("Home_Hero_Title")</h1>
+            <p class="lead">
+                @SharedLocalizer.GetLocalizedHtmlString("Home_Hero_Description")
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="features" class="white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="text-blue display-5 fw-bold lh-1">@SharedLocalizer.GetLocalizedHtmlString("Home_Features_Title")</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 col-sm-6">
+                <div class="p-5 text-center">
+                    <img class="w-100 rounded-circle bordered" src="~/images/accessability.gif" alt="Accessability" />
+                    <h5 class="pt-4" >@SharedLocalizer.GetLocalizedHtmlString("Home_Feature_A")</h5>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-sm-6">
+                <div class="p-5 text-center">
+                    <img class="w-100 rounded-circle bordered" src="~/images/github.gif" alt="Github" />
+                    <h5 class="pt-4">@SharedLocalizer.GetLocalizedHtmlString("Home_Feature_B") <a href="https://github.com/elnemerahmed/UCASecurity">GitHub</a>.</h5>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-sm-6">
+                <div class="p-5 text-center">
+                    <img class="w-100 rounded-circle bordered" src="~/images/allinone.gif" alt="All in one" />
+                    <h5 class="pt-4">@SharedLocalizer.GetLocalizedHtmlString("Home_Feature_C")</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="algorithms" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="text-blue display-5 fw-bold lh-1">@SharedLocalizer.GetLocalizedHtmlString("Home_Tools_Title")</h1>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="pt-2 col-12 col-md-3 col-sm-6">
+                <a class="no-underline" asp-controller="Home" asp-action="Symmetric">
+                    <div class="card">
+                        <img src="~/images/symmetric.png" class="card-img-top" alt="">
+                        <div class="card-body text-center">
+                            <h6 class="card-text">@SharedLocalizer.GetLocalizedHtmlString("Home_Symmetric")</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="pt-2 col-12 col-md-3 col-sm-6">
+                <a class="no-underline" asp-controller="Home" asp-action="Asymmetric">
+                    <div class="card">
+                        <img src="~/images/asymmetric.png" class="card-img-top" alt="">
+                        <div class="card-body text-center">
+                            <h6 class="card-text">@SharedLocalizer.GetLocalizedHtmlString("Home_Asymmetric")</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="pt-2 col-12 col-md-3 col-sm-6">
+                <a class="no-underline" asp-controller="Home" asp-action="Math">
+                    <div class="card">
+                        <img src="~/images/math.png" class="card-img-top" alt="">
+                        <div class="card-body text-center">
+                            <h6 class="card-text">@SharedLocalizer.GetLocalizedHtmlString("Home_Math")</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="pt-2 col-12 col-md-3 col-sm-6">
+                <a class="no-underline" asp-controller="Functions" asp-action="Hash">
+                    <div class="card">
+                        <img src="~/images/hash.png" class="card-img-top" alt="">
+                        <div class="card-body text-center">
+                            <h6 class="card-text">@SharedLocalizer.GetLocalizedHtmlString("Home_Hash")</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="team" class="white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="text-blue display-5 fw-bold lh-1">@SharedLocalizer.GetLocalizedHtmlString("Home_Team_Title")</h1>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-12 col-md-4 col-sm-6 team">
+                <div>
+                    <img class="w-100 team-member" src="~/images/hala.gif" alt="Hala" />
+                </div>
+                <div class="text-center text-blue pt-3">
+                    <h5>@SharedLocalizer.GetLocalizedHtmlString("Home_Team_Hala")</h5>
+                </div>
+                <div class="text-center"><span>@SharedLocalizer.GetLocalizedHtmlString("Home_Team_Hala_BIO")</span></div>
+            </div>
+            <div class="col-12 col-md-4 col-sm-6 team">
+                <div>
+                    <img class="w-100 team-member" src="~/images/ahmed.gif" alt="Ahmed" />
+                </div>
+                <div class="text-center text-blue pt-3">
+                    <h5>@SharedLocalizer.GetLocalizedHtmlString("Home_Team_Ahmed")</h5>
+                </div>
+                <div class="text-center"><span>@SharedLocalizer.GetLocalizedHtmlString("Home_Team_Ahmed_BIO")</span></div>
+            </div>
+            <div class="col-12 col-md-4 col-sm-6 team">
+                <div>
+                    <img class="w-100 team-member" src="~/images/etaf.gif" alt="Etaf" />
+                </div>
+                <div class="text-center text-blue pt-3">
+                    <h5>@SharedLocalizer.GetLocalizedHtmlString("Home_Team_Etaf")</h5>
+                </div>
+                <div class="text-center"><span>@SharedLocalizer.GetLocalizedHtmlString("Home_Team_Etaf_BIO")</span></div>
+            </div>
+        </div>
+    </div>
+</div>
